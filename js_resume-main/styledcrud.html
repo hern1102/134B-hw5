@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>styled crud</title>
+    <script type="module" src="blog.js"></script>
+    <script src='./blog.js'></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styledcrud.css">
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </link>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.0/purify.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <a href="https://nimble-gumdrop-2dd4fc.netlify.app">Anthony Hernandez</a>
+        <nav>
+            <a href="https://nimble-gumdrop-2dd4fc.netlify.app/cv.html">CV</a> 
+            <a href="https://nimble-gumdrop-2dd4fc.netlify.app/projects.html">Projects</a>
+            <a href="https://nimble-gumdrop-2dd4fc.netlify.app/contact.html">Contact Me</a>
+        </nav>
+
+    </header>
+    <div id="wrapper">
+        <aside> 
+            <picture>
+                <source media="(min-width:300px)" srcset="https://nimble-gumdrop-2dd4fc.netlify.app//profilePic.jpeg">
+                <img src="https://nimble-gumdrop-2dd4fc.netlify.app//profilePic.jpeg" alt="A picture of me." style="width: 300px;">
+            </picture> 
+        </aside>
+        <main>
+            <h1>Personal Blog Posts</h1>
+    
+            <button id="add_post_bttn"><i style="font-size:25px" class="fa fa-telegram" aria-hidden="true"></i></button>
+            
+            <ul id="list" class="ul-styled">
+            </ul>
+            
+            <dialog id="post_dialog">
+                <label for="date"><i class="fa fa-calendar" aria-hidden="true"></i></label><br>
+                <input type="date" id="date" name="date"><br><br>
+                <label for="title"><i class="fa fa-hand-o-down" aria-hidden="true"></i></label><br>
+                <input type="text" id="title" name="title" placeholder="title" size="51ch"><br><br>
+                <label for="blogPost"><i class="fa fa-file-text-o" aria-hidden="true"></i>  </label><br>
+                <textarea id="blog_post" name="blog_post" rows="4" cols="50" placeholder="Blog post here..."></textarea><br><br>
+                <button id="cancel_bttn"><i style= "font-size:18px" class="fa fa-times" aria-hidden="true"></i></button>
+                <button id="save_bttn"><i style= "font-size:18px" class="fa fa-floppy-o" aria-hidden="true"></i></button>
+            </dialog>
+        </main>
+    </div>
+</body>
+</html>

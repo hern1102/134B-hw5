@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anthony Hernandez</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.0/purify.min.js"></script>
+</head>
+<body>
+        <main>
+            <h1>Simple Dialogs?</h1>
+
+            <button id="alert">Alert</button>
+            <button id="confirm">Confirm</button>
+            <button id="prompt">Prompt</button>
+            <button id="safer_prompt">Safer Prompt</button>
+            <hr>
+            <output id="out"></output>
+
+            <script>
+                const el_alert = document.getElementById("alert");
+                const el_confirm = document.getElementById("confirm");
+                const el_prompt = document.getElementById("prompt");
+                const el_safer_prompt = document.getElementById("safer_prompt");
+                const el_out = document.getElementById("out");
+
+                el_alert.addEventListener("click", function () {
+                    alert("Alert Pressed.");
+                });
+
+                el_confirm.addEventListener("click", function () {
+                    el_out.textContent = '';
+                    
+                    setTimeout(() => {
+                        let outcome = window.confirm("Do you confirm this?");
+                        el_out.textContent = `Confirm Result : ${outcome}`;
+                    }, 30); 
+                });
+
+                el_prompt.addEventListener("click", function () {
+                    el_out.textContent = '';
+        
+                   setTimeout(() => {
+                    let outcome = window.prompt("What is your name?");
+                    if(outcome != "" && outcome != null){
+                        let purifiedOutcome = 
+                        el_out.textContent = `Prompt Result: ${outcome}`;
+                    }else{
+                        el_out.textContent = `Prompt Result: The user didn't enter anything.`;  
+                    }
+                    }, 30);
+                });
+
+                el_safer_prompt.addEventListener("click", function () {
+                    el_out.textContent = '';
+
+                   setTimeout(() => {
+                    let dirty = window.prompt("Please enter your name");
+                    if(dirty != "" && dirty != null){
+                        let clean = DOMPurify.sanitize(dirty);
+                        el_out.textContent = `Prompt Result: ${clean}`;
+                    }else{
+                        el_out.textContent = `Prompt Result: The user didn't enter anything.`;
+                    }
+                    }, 30); 
+                });
+
+            </script>
+
+        </main>
+</body>
+</html>

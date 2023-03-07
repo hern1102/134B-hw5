@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HGLDS95R7"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7HGLDS95R7');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anthony Hernandez</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </link>
+</head>
+<body>
+    <header>
+        <a href="https://nimble-gumdrop-2dd4fc.netlify.app">Anthony Hernandez</a>
+        <nav>
+            <a href="https://nimble-gumdrop-2dd4fc.netlify.app/cv.html">CV</a> 
+            <a href="https://nimble-gumdrop-2dd4fc.netlify.app/projects.html">Projects</a>
+            <a href="https://nimble-gumdrop-2dd4fc.netlify.app/contact.html">Contact Me</a>
+        </nav>
+
+    </header>
+    <div id="wrapper">
+        <aside > 
+            <picture>
+                <source media="(min-width:300px)" srcset="https://nimble-gumdrop-2dd4fc.netlify.app//profilePic.jpeg">
+                <img src="https://nimble-gumdrop-2dd4fc.netlify.app//profilePic.jpeg" alt="A picture of me." style="width: 300px;;">
+            </picture>
+        </aside>
+        <main>
+            <h1>Lets Talk!</h1>
+            <form action="" method="" id="contactForm">
+                <fieldset>
+                    <legend class="highlight">Your Contact Information:</legend>
+                <label for="title">Prefix:</label>
+                    <select name="title" id="title">
+                    <optgroup label="Professional Titles">
+                        <option value="dr.">Dr.</option>
+                    </optgroup>
+                    <optgroup label="Other titles">
+                        <option value="mr.">Mr.</option>
+                        <option value="ms.">Ms.</option>
+                        <option value="mrs.">Mrs.</option>
+                    </optgroup>
+                    </select><br>
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname"><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br>
+                    <label for="comment">Additional Comment:</label>
+                    <textarea name="comment" id="commnet" cols="100" rows="10"></textarea><br>
+                    <label for="contactReason">Reason for reaching out:</label>
+                    <input list="reasonsList" name="reasons" id="reasons"><br>
+                    <datalist id="reasonsList">
+                        <option value="Job opportunity"></option>
+                        <option value="Business Opportunity"></option>
+                        <option value="Just to chat"></option>
+                    </datalist>
+                </input><br><br>
+                    <button type="submit" onclick="showAlert()"><i style="font-size: 25px;" class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                </fieldset>
+            </form>
+            <template name="temp1" id="temp1">
+                <p>Thanks for reaching out, I'll get back you to you as soon as I can!</p>
+            </template>
+            <script>
+                function showAlert(){
+                    alert("Thanks for reaching out, I'll get back to you as soon as I can!")
+                }
+            </script>
+        </main>
+    </div>
+    <footer>
+        <a href="https://www.linkedin.com/in/anthony-hernandez-590737180/"><i style="font-size:30px"class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+    </footer>
+</body>
+</html>
