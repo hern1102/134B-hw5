@@ -1,0 +1,16 @@
+.ul-styled {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+.ul-styled > li {
+    text-align: left;
+    padding: 15px;
+    max-width: 100ch;
+    margin: 10px; 
+}
