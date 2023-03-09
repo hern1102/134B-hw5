@@ -18,6 +18,7 @@
             <a href="https://teal-froyo-d0ba62.netlify.app/cv.html">CV</a> 
             <a href="https://teal-froyo-d0ba62.netlify.app/projects.html">Projects</a>
             <a href="https://teal-froyo-d0ba62.netlify.app/contact.html">Contact Me</a>
+            <a href="https://teal-froyo-d0ba62.netlify.app/methodtest.html">Method Test</a>
         </nav>
 
     </header>
@@ -32,25 +33,35 @@
             <h1>Experimental Page</h1>
 
             <form action="" method="">
-                <label for="id">Record ID:</label>
-                <input type="number" id="id" name="id"><br><br>
+                <label for="id">Record ID:</label><br>
+                <input type="number" id="id" name="id" style="width: 350px;"><br><br>
                 
-                <label for="article_name">Article Name:</label>
-                <input type="text" id="article_name" name="article_name"><br><br>
+                <label for="article_name">Article Name:</label><br>
+                <input type="text" id="article_name" name="article_name" style="width: 350px;"><br><br>
                 
-                <label for="article_body">Article Body:</label>
+                <label for="article_body">Article Body:</label><br>
                 <textarea id="article_body" name="article_body" rows="4" cols="70"></textarea><br><br>
                 
-                <label for="date">Date:</label>
-                <input type="text" id="date" name="date" readonly><br><br>
-            </form>
+                <label for="date">Date:</label><br>
+                <input type="text" id="date" name="date" style="width: 350px;" readonly><br><br>
+            </form><br>
 
-            <button id="postBtn" >postBtn</button>
+
+            <label>
+                <input type="radio" id="xml" name="httpRequest" value="xml">
+                    XMLhttpRequest
+            </label><br>
+            <label>
+                <input type="radio" id="fetch" name="httpRequest" value="fetch">
+                    Fetch
+            </label><br><br>
+
+            <button id="postBtn">postBtn</button>
             <button id="getBtn" >getBtn</button>
             <button id="putBtn" >putBtn</button>
-            <button id="deleteBtn" >deleteBtn</button>
+            <button id="deleteBtn" >deleteBtn</button><br><br>
 
-
+        
             <hr>
 
             <output id="response"></output>
