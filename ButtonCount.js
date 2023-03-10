@@ -8,6 +8,7 @@ class ButtonCount extends HTMLElement {
         this.counter = 0;
 
         buttonIcon.innerText = `Times Clicked: ${this.counter}`;
+        buttonIcon.style.fontSize = '1.4rem';
 
         buttonIcon.addEventListener('click', () => {
             this.counter++;
