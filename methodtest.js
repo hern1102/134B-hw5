@@ -18,15 +18,13 @@ function display (response) {
     if(response.article_body === undefined){
         response.article_body = 'Previous post body';
     }
+
+    let res = JSON.stringify(response, null, 1);
+
     el_output.innerHTML = 
-    `<h3> Article Information </h3>
-    <pre>
-        { 
-        "article_name" : "${response.article_name}",
-        "date" : "${response.date}",
-        "id" : "${response.id}",
-        "article_body" : "${response.article_body}"
-        }
+    `<h3> Response </h3>
+    <pre style="padding-right: 30px;">
+        ${res}
     </pre>`;
 }
 
@@ -113,7 +111,7 @@ function xml_postBtnFn () {
         if(this.readyState ===XMLHttpRequest.DONE) {
             if(this.status === 200) {
                 const response = JSON.parse(this.responseText);
-                display(response.json);
+                display(response);
             }
         }
     }
@@ -136,7 +134,7 @@ function xml_getBtnFn () {
         if(this.readyState ===XMLHttpRequest.DONE) {
             if(this.status === 200) {
                 const response = JSON.parse(this.responseText);
-                display(response.args);
+                display(response);
             }
         }
     }
@@ -163,7 +161,7 @@ function xml_putBtnFn () {
         if(this.readyState ===XMLHttpRequest.DONE) {
             if(this.status === 200) {
                 const response = JSON.parse(this.responseText);
-                display(response.json);
+                display(response);
             }
         }
     }
@@ -188,7 +186,7 @@ function xml_deleteBtnFn () {
         if(this.readyState ===XMLHttpRequest.DONE) {
             if(this.status === 200) {
                 const response = JSON.parse(this.responseText);
-                display(response.json);
+                display(response);
             }
         }
     }
@@ -220,7 +218,7 @@ async function postBtnFn () {
         }
 
         response = await response.json();
-        return response.json;
+        return response;
 
     }catch (error){
         console.error(error);
@@ -251,7 +249,7 @@ async function putBtnFn () {
         }
 
         response = await response.json();
-        return response.json;
+        return response;
 
     }catch (error){
         console.error(error);
@@ -278,7 +276,7 @@ async function getBtnFn () {
         }
 
         response = await response.json();
-        return response.args;
+        return response;
 
     }catch (error){
         console.error(error);
@@ -307,7 +305,7 @@ async function deleteBtnFn () {
         }
 
         response = await response.json();
-        return response.json;
+        return response;
 
     }catch (error){
         console.error(error);
